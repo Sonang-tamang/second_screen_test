@@ -27,10 +27,15 @@ android {
     }
 
     buildTypes {
-        release {
-            signingConfig = signingConfigs.debug  // Debug signing config for release
+        release { 
+        minifyEnabled false  // Disable minification
+        shrinkResources false  // Disable resource shrinking
+        signingConfig = signingConfigs.debug  // Debug signing config for release
         }
     }
+
+   
+
 }
 
 flutter {
