@@ -34,7 +34,6 @@ class MyApp extends StatelessWidget {
               SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () async {
-                  // Define widget data for secondary screen
                   await dualScreenController.showOnSecondaryScreen(
                     "Container",
                     {
@@ -44,7 +43,15 @@ class MyApp extends StatelessWidget {
                     },
                   );
                 },
-                child: Text('Show on Secondary Screen'),
+                child: Text('Show Widget on Secondary Screen'),
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () async {
+                  await dualScreenController
+                      .showVideoOnSecondaryScreen("sample_video");
+                },
+                child: Text('Play Video on Secondary Screen'),
               ),
             ],
           ),
