@@ -110,9 +110,14 @@ class VideoPresentation(
             )
         }
 
-        // Start the video automatically
+        // Start the video automatically and set it to loop after finishing
         videoView.setOnPreparedListener { mediaPlayer ->
             adjustVideoAspect(videoView, mediaPlayer.videoWidth, mediaPlayer.videoHeight)
+            videoView.start()
+        }
+
+        // Set an OnCompletionListener to replay the video
+        videoView.setOnCompletionListener {
             videoView.start()
         }
 
@@ -151,3 +156,4 @@ class VideoPresentation(
         }
     }
 }
+
