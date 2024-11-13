@@ -101,7 +101,8 @@ class VideoPresentation(
 
         // Create VideoView to play the video
         val videoView = VideoView(context).apply {
-            val videoUri = Uri.parse("android.resource://${context.packageName}/raw/$videoAsset")
+            val videoUri = Uri.parse("android.resource://${context.packageName}/raw/sample_video")
+
             setVideoURI(videoUri)
             setBackgroundColor(Color.BLACK)
             layoutParams = RelativeLayout.LayoutParams(
